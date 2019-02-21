@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2t7-tl-DsS">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Space Listing-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="SpaceListViewController" customModule="SpaceListing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Lnq-Al-Pdp">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="u4o-l6-5Sf">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SpaceListCollectionViewCell" id="uov-XD-6L5" customClass="SpaceListCollectionViewCell" customModule="SpaceListing" customModuleProvider="target">
+                                        <rect key="frame" x="87.5" y="0.0" width="200" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q0L-ap-qoj">
+                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                                </imageView>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="3Kq-St-7P7">
+                                                    <rect key="frame" x="12" y="12" width="20" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="kcD-Sg-Tso"/>
+                                                        <constraint firstAttribute="width" constant="20" id="yd3-zY-G4U"/>
+                                                    </constraints>
+                                                </activityIndicatorView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="Q0L-ap-qoj" secondAttribute="bottom" id="3Q4-8n-Lbe"/>
+                                            <constraint firstAttribute="trailing" secondItem="Q0L-ap-qoj" secondAttribute="trailing" id="Dj7-va-CXy"/>
+                                            <constraint firstItem="Q0L-ap-qoj" firstAttribute="top" secondItem="uov-XD-6L5" secondAttribute="top" id="cYR-nO-D5f"/>
+                                            <constraint firstItem="3Kq-St-7P7" firstAttribute="leading" secondItem="uov-XD-6L5" secondAttribute="leading" constant="12" id="ewh-hf-pER"/>
+                                            <constraint firstItem="3Kq-St-7P7" firstAttribute="top" secondItem="uov-XD-6L5" secondAttribute="top" constant="12" id="j7g-aR-gSa"/>
+                                            <constraint firstItem="Q0L-ap-qoj" firstAttribute="leading" secondItem="uov-XD-6L5" secondAttribute="leading" id="xST-pA-z8P"/>
+                                        </constraints>
+                                        <size key="customSize" width="200" height="200"/>
+                                        <connections>
+                                            <outlet property="spaceImageActivityIndicatorView" destination="3Kq-St-7P7" id="Jxa-Sl-obL"/>
+                                            <outlet property="spaceImageView" destination="Q0L-ap-qoj" id="nkL-pX-r10"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="RlM-9E-3XJ">
+                                <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Lnq-Al-Pdp" secondAttribute="bottom" id="72o-hs-sZf"/>
+                            <constraint firstItem="Lnq-Al-Pdp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Bpc-KC-8nU"/>
+                            <constraint firstItem="RlM-9E-3XJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Bvc-GF-Fu0"/>
+                            <constraint firstItem="RlM-9E-3XJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="PBr-h8-DJE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Lnq-Al-Pdp" secondAttribute="trailing" id="mni-EU-CTO"/>
+                            <constraint firstItem="Lnq-Al-Pdp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="tzb-oi-8Us"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Space Listing" id="fo0-YA-Pux"/>
+                    <connections>
+                        <outlet property="spaceListCollectionView" destination="Lnq-Al-Pdp" id="J7j-Pq-PcR"/>
+                        <outlet property="spaceListCollectionViewActivityIndicatorView" destination="RlM-9E-3XJ" id="cZt-pu-6bK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="778.39999999999998" y="105.69715142428787"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lhI-d9-7C4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2t7-tl-DsS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NbV-ql-pcU">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="mRY-Ta-OyX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Adk-On-ccV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-162.40000000000001" y="105.69715142428787"/>
+        </scene>
+    </scenes>
+</document>
